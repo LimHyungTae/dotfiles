@@ -14,7 +14,7 @@ tab_position = bottom
 
 [[[child0]]]
 
-fullscreen = False
+fullscreen = True
 
 last_active_term = e2008046-eacb-47eb-8a3d-ee229f383185
 
@@ -26,9 +26,9 @@ order = 0
 
 parent = ""
 
-position = 115:42
+position = 2115:42
 
-size = 991, 585
+size = 1691, 1085
 
 title = URL@ShapeLim-ubuntu: ~
 

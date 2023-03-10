@@ -9,6 +9,7 @@ alias sds='source ~/catkin_ws/devel/setup.zsh'
 alias sag='sudo apt-get'
 alias sagi='sudo apt-get install'
 alias hist='history|grep' # hg already exists
+alias xo="xdg-open"
 # Git
 alias gs='git status'
 alias gp='git pull'
