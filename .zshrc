@@ -2,6 +2,7 @@ source .zshrc_local
 
 plugins=(
     git
+    fasd
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
