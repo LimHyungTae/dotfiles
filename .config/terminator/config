@@ -1,0 +1,54 @@
+[global_config]
+
+focus = system
+
+handle_size = 1
+
+tab_position = bottom
+
+[keybindings]
+
+[layouts]
+
+[[default]]
+
+[[[child0]]]
+
+fullscreen = False
+
+last_active_term = e2008046-eacb-47eb-8a3d-ee229f383185
+
+last_active_window = True
+
+maximised = False
+
+order = 0
+
+parent = ""
+
+position = 115:42
+
+size = 991, 585
+
+title = URL@ShapeLim-ubuntu: ~
+
+type = Window
+
+[plugins]
+
+[profiles]
+
+[[default]]
+scrollback_infinite = True
+
+background_darkness = 1.0
+
+background_image = None
+
+background_type = transparent
+
+scrollbar_position = hidden
+
+show_titlebar = False
+
+use_system_font = False
