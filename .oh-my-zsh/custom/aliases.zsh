@@ -10,11 +10,14 @@ alias sag='sudo apt-get'
 alias sagi='sudo apt-get install'
 alias hist='history|grep' # hg already exists
 alias xo="xdg-open"
+
 # Git
 alias gs='git status'
 alias gp='git pull'
 alias ga='git add'
 alias gcm='git commit -m'
+alias glo='git log'
+alias gd='git diff'
 
 alias cw='cd ~/catkin_ws'
 alias cs='cd ~/catkin_ws/src'
