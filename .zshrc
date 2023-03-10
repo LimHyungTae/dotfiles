@@ -1,7 +1,11 @@
 source .zshrc_local
 
 plugins=(
-	git)
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
 source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/aliases.zsh
 source $ZSH/custom/functions.zsh

@@ -37,6 +37,6 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
-source ./coc.vim
-source ./basic.vim
-source ./keybindings.vim
+source ~/.config/nvim/coc.vim
+source ~/.config/nvim/basic.vim
+source ~/.config/nvim/keybindings.vim

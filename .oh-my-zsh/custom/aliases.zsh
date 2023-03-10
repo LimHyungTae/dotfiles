@@ -1,3 +1,5 @@
+alias vim="nvim"
+
 alias vz='sudo vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias sds='source ~/catkin_ws/devel/setup.zsh'
