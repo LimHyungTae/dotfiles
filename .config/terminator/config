@@ -7,6 +7,8 @@
   [[default]]
     background_darkness = 1.0
     background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font 13
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_infinite = True
@@ -27,10 +29,6 @@
       order = 0
       
       parent = ""
-      
-      position = 115:42
-      
-      size = 991, 585
       
       title = URL@ShapeLim-ubuntu: ~
       
