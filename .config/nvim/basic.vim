@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let mapleader = " " HT: Originally, it's Nacho's style, but I prefer '\' key as the leader key!
+let mapleader = " " " HT: Originally, it's Nacho's style, but I prefer '\' key as the leader key!
 let g:pymode_lint_write = 0 
 " Enable filetype plugins
 filetype plugin indent on
