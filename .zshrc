@@ -10,8 +10,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/aliases.zsh
 source $ZSH/custom/functions.zsh
-
-export ZSH="$HOME/.oh-my-zsh"
+source /opt/ros/noetic/setup.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -28,5 +27,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
