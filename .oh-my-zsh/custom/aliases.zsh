@@ -4,11 +4,12 @@ alias cl=clear
 
 ###### Edit using vim ######
 alias va='vim ~/.oh-my-zsh/custom/aliases.zsh'
-# alias vz='sudo vim ~/.zshrc'
-alias vz='vim ~/.zshrc_local'
+alias vz='vim ~/.zshrc'
 alias vzl='vim ~/.zshrc_local'
 
+alias sr='source /opt/ros/noetic/setup.zsh && source ~/catkin_ws/devel/setup.zsh'
 alias sz='source ~/.zshrc'
+alias szl='source ~/.zshrc_local'
 alias sds='source ~/catkin_ws/devel/setup.zsh'
 alias sag='sudo apt-get'
 alias sagi='sudo apt-get install'
