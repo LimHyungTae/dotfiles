@@ -1,9 +1,13 @@
-alias vim="nvim"
+alias vim="lvim"
 
 alias cl=clear
-alias va='sudo vim ~/.oh-my-zsh/custom/aliases.zsh'
-alias vz='sudo vim ~/.zshrc'
-alias vzl='sudo vim ~/.zshrc_local'
+
+###### Edit using vim ######
+alias va='vim ~/.oh-my-zsh/custom/aliases.zsh'
+# alias vz='sudo vim ~/.zshrc'
+alias vz='vim ~/.zshrc_local'
+alias vzl='vim ~/.zshrc_local'
+
 alias sz='source ~/.zshrc'
 alias sds='source ~/catkin_ws/devel/setup.zsh'
 alias sag='sudo apt-get'
