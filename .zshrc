@@ -1,4 +1,3 @@
-source $ZSH/oh-my-zsh.sh
 source ~/.zshrc_local
 
 plugins=(
@@ -8,4 +7,5 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-
+# The below line should be placed aftered the `plugins`
+source $ZSH/oh-my-zsh.sh

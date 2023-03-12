@@ -23,9 +23,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
-lvim.keys.normal_mode["<Leader>c"] = '"+y'
-lvim.keys.normal_mode["<Leader>p"] = '"+p'
-
 lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.insert_mode["kj"] = "<ESC>"
 --
