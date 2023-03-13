@@ -28,4 +28,5 @@ else
 fi
 unset __conda_setup
 # # # <<< conda initialize <<<
-
+xmodmap ~/.xmodmap
+xcape -e 'Mode_switch=Escape'
