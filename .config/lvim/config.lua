@@ -10,7 +10,8 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
+lvim.format_on_save = false
+-- lvim.format_on_save.enabled = false
 lvim.lsp.diagnostics.virtual_text = false
 lvim.colorscheme = "lunar"
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -20,11 +21,20 @@ lvim.colorscheme = "lunar"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+-- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+-- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":bprev<CR>"
+
 
 lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.insert_mode["kj"] = "<ESC>"
+
+local set = vim.opt -- set options
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+--
 --
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")

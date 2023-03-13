@@ -9,3 +9,6 @@ plugins=(
 
 # The below line should be placed aftered the `plugins`
 source $ZSH/oh-my-zsh.sh
+
+xmodmap ~/.xmodmap
+xcape -e 'Mode_switch=Escape'
