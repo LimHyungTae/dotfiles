@@ -24,3 +24,8 @@
   ```
   $ sudo apt install xclip xcape -y
   ```
+  
+## Memo for myself
+
+* Files related with yadm are located in `~/.local/share/yadm/repo.git`. 
+
