@@ -1,3 +1,9 @@
+if empty(glob('/home/shapelim/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+"
 " Plug-In 시작 (플러그인 설치 경로)
 call plug#begin('~/.vim/plugged')
 
@@ -26,8 +32,8 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " 이하 본인의 nvim 설정
-colorscheme codedark
-let g:airline_theme = 'codedark'
+" colorscheme codedark
+" let g:airline_theme = 'codedark'
 "ignore window 세팅 for ctrl+p"
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 " alternatively, pass a path where Vundle should install plugins
