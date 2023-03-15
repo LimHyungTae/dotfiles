@@ -23,6 +23,7 @@ alias ga='git add'
 alias gcm='git commit -m'
 alias glo='git log'
 alias gd='git diff'
+alias g.='git checkout .'
 
 alias cw='cd ~/catkin_ws'
 alias cs='cd ~/catkin_ws/src'
