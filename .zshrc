@@ -1,4 +1,5 @@
 source ~/.zshrc_local
+source ~/.zshrc_shortcuts
 
 plugins=(
     git
