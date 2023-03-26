@@ -1,27 +1,3 @@
 # Remove Ctrl + L shortcut! Since I have `cl` command as an alias for clear
 bindkey -r "^L"
-# bindkey -s '^u' '^[[1;2A'
-# bindkey "^[[1;2A" history-beginning-search-backward
-#
-# bindkey -s '^u' '^[[1;2~'
-# bindkey -s '^u' '^[[5;2~'
-
-# function zle-line-init zle-keymap-select {
-#   case $KEYMAP in
-#     vicmd) bindkey -s '^u' '^[[1;2~' ;;
-#     *) bindkey -s '^u' '^U' ;;
-#   esac
-# }
-# zle -N zle-line-init
-# zle -N zle-keymap-select
-
-# bindkey -s '^u' "$(tput kpp)"
-#
-# bindkey -e # Enable Emacs-style keybindings
-# bindkey '^[[5;2~' vi-beginning-of-line # Map Shift+PgUp to go to the beginning of the line
-# bindkey -s '^u' "$(tput kpp)" # Map Ctrl+u to the escape sequence that corresponds to Shift+PgUp
-
-# bindkey -e # Enable Emacs-style keybindings
-# bindkey '^[[5;2~' vi-beginning-of-line # Map Shift+PgUp to go to the beginning of the line in command mode
-# bindkey -s '^U' '^[[5;2~' # Map Ctrl+u to the escape sequence for Shift+PgUp
 

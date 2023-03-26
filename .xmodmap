@@ -4,11 +4,6 @@ keysym l = l L Right
 keysym k = k K Up
 keysym j = j J Down
 
-! keysym ㅓ = j J Down
-! keysym ㅗ = h H Left
-! keysym ㅣ = l L Right
-! keysym ㅏ = k K Up
-
 keysym u = u U Prior
 keysym i = i I Home
 keysym o = o O End
