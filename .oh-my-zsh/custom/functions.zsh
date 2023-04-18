@@ -155,5 +155,18 @@ function gitignore() {
 taker () { take $(mktemp -d) }
 
 compress_pdf () {
-    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/prepress -dPrinted=false -dNOPAUSE -dQUIET -dBATCH -sOutputFile=root_small.pdf root.pdf
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/prepress -dPrinted=false -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$2 $1
+}
+
+output_diff_tex() { # $1: source, $2: tmp. filename, $3 past version
+    latexpand $1 > $2
+    latexdiff $3 $2 > "diff.tex"
+}
+
+merge_two_pdfs() {
+    pdftk $1 $2 output $3
+}
+
+merge_three_pdfs() {
+    pdftk $1 $2 $3 output $4
 }

@@ -4,6 +4,14 @@
   tab_position = bottom
   suppress_multiple_term_dialog = True
 [keybindings]
+  go_up = <Primary><Shift>k
+  go_down = <Primary><Shift>j
+  go_left = <Primary><Shift>h
+  go_right = <Primary><Shift>l
+  page_up = <Primary>u
+  page_down = <Primary>d
+  next_tab = <Primary><Alt>l
+  prev_tab = <Primary><Alt>h
 [profiles]
   [[default]]
     background_darkness = 1.0

@@ -18,7 +18,7 @@ alias xo="xdg-open"
 
 # Git
 alias gs='git status'
-alias gp='git pull'
+alias gp='git push'
 alias ga='git add'
 alias gcm='git commit -m'
 alias glo='git log'
@@ -33,4 +33,5 @@ alias run_clion='cd /opt/clion-2022.1.3/bin/ && ./clion.sh'
 
 alias n.='nautilus .'
 # For Patchwork2
+alias p2r='nautilus /home/shapelim/experiments/patchwork2_kitti'
 alias p2='nautilus /media/shapelim/UX960NVMe1/patchwork2_data'

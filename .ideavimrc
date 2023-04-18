@@ -1,24 +1,32 @@
+let mapleader = "\<Space>"
+""" Plugins  --------------------------------
 set visualbell
 set noerrorbells
-let mapleader = " "
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set exchange
+" Trying the new syntax
+Plug 'easymotion/vim-easymotion'
+Plug 'machakann/vim-highlightedyank'
+
 
 " j+k or k+j escapes insert mode
 imap jk <ESC>
 imap kj <ESC>
 
-" Copy paste from clipboard: <leader>+c / <leader>+v
-" HT - It's awesome!
-map <silent><leader>c "+y
-map <silent><leader>p "+p
+" Map CapsLock to left arrow key in insert mode
+imap <CapsLock> <Esc>li
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => The most relevant keybindigs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><C-s>     :w<cr>
-nmap <silent><leader>w :w<cr>
-nmap <silent><leader>x :x<cr>
-nmap <silent><leader>q :q!<cr>
-nmap <silent>Q :bd<cr>
+nnoremap <leader>w :w!<CR>
+nnoremap <leader>q :q!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Useful mappings to make search results appear in the middle of the screen
@@ -30,12 +38,3 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Shortcutting split navigation, saving a keypress:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap split navigations to just CTRL +hjkl
-" HT - 화면 분할 후 움직일 때
-map <silent><C-h> <C-w>h
-map <silent><C-j> <C-w>j
-map <silent><C-k> <C-w>k
-map <silent><C-l> <C-w>l
