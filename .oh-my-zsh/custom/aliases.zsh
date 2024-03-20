@@ -4,6 +4,7 @@ alias cl=clear
 
 ###### Edit using vim ######
 alias va='vim ~/.oh-my-zsh/custom/aliases.zsh'
+alias vf='vim ~/.oh-my-zsh/custom/functions.zsh'
 alias vz='vim ~/.zshrc'
 alias vzl='vim ~/.zshrc_local'
 
@@ -17,7 +18,7 @@ alias hist='history|grep' # hg already exists
 alias xo="xdg-open"
 
 # Git
-alias gs='git status'
+# alias gs='git status' # gs is already used when compress a pdf file
 alias gp='git push'
 alias ga='git add'
 alias gcm='git commit -m'
@@ -35,3 +36,4 @@ alias n.='nautilus .'
 # For Patchwork2
 alias p2r='nautilus /home/shapelim/experiments/patchwork2_kitti'
 alias p2='nautilus /media/shapelim/UX960NVMe1/patchwork2_data'
+alias hilti='nautilus /media/shapelim/UX980/HILTI_2023_DATASET'
