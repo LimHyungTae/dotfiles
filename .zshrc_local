@@ -12,7 +12,11 @@ source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 source $ZSH/custom/aliases.zsh
 source $ZSH/custom/functions.zsh
-source /opt/ros/noetic/setup.zsh
+
+# For ROS2 option
+source /opt/ros/humble/setup.zsh
+source ~/catkin_ws/install/setup.zsh
+export ROS_LOCALHOST_ONLY=1
 
 # # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
@@ -31,3 +35,4 @@ unset __conda_setup
 #
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6

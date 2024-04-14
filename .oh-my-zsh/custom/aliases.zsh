@@ -1,4 +1,4 @@
-alias vim="lvim"
+# alias vim="lvim"
 
 alias cl=clear
 
@@ -28,7 +28,8 @@ alias g.='git checkout .'
 
 alias cw='cd ~/catkin_ws'
 alias cs='cd ~/catkin_ws/src'
-alias cb='catkin build'
+alias cab='catkin build'
+alias cob='colcon build'
 alias cwb='cd ~/catkin_ws && catkin build'
 alias run_clion='cd /opt/clion-2022.1.3/bin/ && ./clion.sh'
 
