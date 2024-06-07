@@ -14,9 +14,9 @@ source $ZSH/custom/aliases.zsh
 source $ZSH/custom/functions.zsh
 
 # For ROS2 option
-source /opt/ros/humble/setup.zsh
-source ~/catkin_ws/install/setup.zsh
-export ROS_LOCALHOST_ONLY=1
+# source /opt/ros/humble/setup.zsh
+# source ~/catkin_ws/install/setup.zsh
+# export ROS_LOCALHOST_ONLY=1
 
 # # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
@@ -34,5 +34,8 @@ unset __conda_setup
 # # # <<< conda initialize <<<
 #
 export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+# export PATH=~/.anaconda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+# export PATH=$(echo $PATH | sed -e 's|/home/shapelim/.anaconda/bin:||g')

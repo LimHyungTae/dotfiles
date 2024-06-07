@@ -8,6 +8,7 @@
   go_down = <Primary><Shift>j
   go_left = <Primary><Shift>h
   go_right = <Primary><Shift>l
+  close_term = <Primary><Shift>w
   page_up = <Primary>u
   page_down = <Primary>d
   next_tab = <Primary><Alt>l
@@ -27,7 +28,6 @@
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_infinite = True
-    use_system_font = False
 [layouts]
   [[default]]
     

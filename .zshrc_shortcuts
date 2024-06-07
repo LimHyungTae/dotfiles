@@ -1,3 +1,3 @@
 # Remove Ctrl + L shortcut! Since I have `cl` command as an alias for clear
-bindkey -r "^L"
+# bindkey -r "^L"
 

@@ -1,5 +1,19 @@
 # Hyungtae's dotfiles
 
+## How to use
+
+1. Install `yadm`
+
+```
+sudo apt-get install yadm
+```
+
+2. Run this dotfiles
+
+```
+yadm clone git@github.com:LimHyungTae/dotfiles.git -b main
+```
+
 ## Characteristics
 
 * Adapted from [Nacho's dotfiles](https://github.com/nachovizzo/dotfiles)
@@ -7,7 +21,7 @@
 
 **Don't use this repository on Mac OS! It may not work!**
 
-## What's in these repository
+## What's in this repository
 
 * .config 
   * nvim & lvim config

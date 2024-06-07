@@ -17,6 +17,9 @@ alias sagi='sudo apt-get install'
 alias hist='history|grep' # hg already exists
 alias xo="xdg-open"
 
+alias mcm='mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && make -j 48'
+alias cm='cmake .. -DCMAKE_BUILD_TYPE=Release && make -j 48'
+alias smi='sudo make install'
 # Git
 # alias gs='git status' # gs is already used when compress a pdf file
 alias gp='git push'
