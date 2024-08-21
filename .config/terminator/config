@@ -9,8 +9,8 @@
   go_left = <Primary><Shift>h
   go_right = <Primary><Shift>l
   close_term = <Primary><Shift>w
-  page_up = <Primary>u
-  page_down = <Primary>d
+  page_up = None
+  page_down = None
   next_tab = <Primary><Alt>l
   prev_tab = <Primary><Alt>h
   switch_to_tab_1 = <Alt>1
@@ -19,6 +19,9 @@
   switch_to_tab_4 = <Alt>4
   switch_to_tab_5 = <Alt>5
   switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_9 = <Alt>9
 [profiles]
   [[default]]
     background_darkness = 1.0

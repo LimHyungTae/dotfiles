@@ -11,6 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
+lvim.use_icons = false
 -- lvim.format_on_save.enabled = false
 -- lvim.lsp.diagnostics.virtual_text = false
 lvim.colorscheme = "lunar"
@@ -21,6 +22,9 @@ lvim.colorscheme = "lunar"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+-- normal mode에서 Ctrl+d와 Ctrl+u를 페이지 다운 및 페이지 업으로 매핑
+lvim.keys.normal_mode["<C-d>"] = "<C-b>zz"
+lvim.keys.normal_mode["<C-u>"] = "<C-f>zz"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
@@ -34,6 +38,7 @@ local set = vim.opt -- set options
 set.tabstop = 4
 set.softtabstop = 4
 set.shiftwidth = 4
+set.clipboard = "unnamedplus"
 --
 --
 -- unmap a default keymapping
