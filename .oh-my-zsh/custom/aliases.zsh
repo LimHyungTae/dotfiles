@@ -1,4 +1,4 @@
-# alias vim="lvim"
+alias vim="lvim"
 
 alias cl=clear
 
@@ -43,3 +43,4 @@ alias n.='nautilus .'
 alias p2r='nautilus /home/shapelim/experiments/patchwork2_kitti'
 alias p2='nautilus /media/shapelim/UX960NVMe1/patchwork2_data'
 alias hilti='nautilus /media/shapelim/UX980/HILTI_2023_DATASET'
+
