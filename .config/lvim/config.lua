@@ -22,29 +22,46 @@ lvim.colorscheme = "lunar"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
--- normal mode에서 Ctrl+d와 Ctrl+u를 페이지 다운 및 페이지 업으로 매핑
-lvim.keys.normal_mode["<C-d>"] = "<C-b>zz"
-lvim.keys.normal_mode["<C-u>"] = "<C-f>zz"
+-- Page down & up with zz-- 
+lvim.keys.normal_mode["<C-d>"] = "<PageDown>zz"
+lvim.keys.normal_mode["<C-u>"] = "<PageUp>zz"
+-- Page down & up with zz-- 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":bprev<CR>"
 
+-- Close all but current buffer
+-- https://github.com/LunarVim/LunarVim/discussions/2725
+lvim.keys.normal_mode["<Leader>bo"] = ':%bd!|e #|bd #|normal`"<CR>'
 
 lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.insert_mode["kj"] = "<ESC>"
 
+lvim.keys.term_mode["<esc>"] = "<C-\\><C-n>"
+
 local set = vim.opt -- set options
-set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
-set.clipboard = "unnamedplus"
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
+
+vim.cmd([[
+  autocmd BufNewFile,BufRead *.launch setfiletype xml
+]])
+
+vim.cmd [[
+  tnoremap <C-l> <C-l>
+]]
+
+-- Specify the behavior when switching between buffers
+vim.opt.switchbuf = "useopen,usetab,newtab"
+
 --
 --
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
--- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
+lvim.keys.normal_mode["<C-q>"] = ":bd" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -103,6 +120,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+  "xml", -- for ROS launch file
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }

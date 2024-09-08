@@ -11,8 +11,8 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
 set backspace=eol,start,indent
-set clipboard^=unnamed
-" set clipboard+=unnamedplus
+" set clipboard^=unnamed
+set clipboard+=unnamedplus
 set cmdheight=1
 set colorcolumn=+1
 set completeopt+=menu
