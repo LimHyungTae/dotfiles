@@ -38,7 +38,7 @@ lvim.keys.normal_mode["<Leader>bo"] = ':%bd!|e #|bd #|normal`"<CR>'
 lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.insert_mode["kj"] = "<ESC>"
 
-lvim.keys.term_mode["<esc>"] = "<C-\\><C-n>"
+-- lvim.keys.term_mode["<esc>"] = "<C-\\><C-n>"
 
 local set = vim.opt -- set options
 set.tabstop = 2
