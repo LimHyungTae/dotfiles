@@ -30,6 +30,8 @@ alias glo='git log'
 alias gd='git diff'
 alias g.='git checkout .'
 
+alias lg='lazygit'
+
 alias cw='cd ~/catkin_ws'
 alias cs='cd ~/catkin_ws/src'
 alias cab='catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3'
@@ -44,8 +46,4 @@ alias rbi='rosbag info'
 alias cond='conda deactivate'
 
 alias n.='nautilus .'
-# For Patchwork2
-alias p2r='nautilus /home/shapelim/experiments/patchwork2_kitti'
-alias p2='nautilus /media/shapelim/UX960NVMe1/patchwork2_data'
-alias hilti='nautilus /media/shapelim/UX980/HILTI_2023_DATASET'
 
