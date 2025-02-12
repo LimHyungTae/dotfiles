@@ -38,12 +38,29 @@ lvim.keys.normal_mode["<Leader>bo"] = ':%bd!|e #|bd #|normal`"<CR>'
 lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.insert_mode["kj"] = "<ESC>"
 
--- lvim.keys.term_mode["<esc>"] = "<C-\\><C-n>"
+-- NOTE(hlim): Below line works!
+-- lvim.keys.normal_mode["<leader>e"] = ":NvimTreeFindFileToggle<CR>"
+lvim.keys.normal_mode["<leader>e"] = ":NvimTreeFocus<CR>"
 
-local set = vim.opt -- set options
-set.tabstop = 2
-set.softtabstop = 2
-set.shiftwidth = 2
+-- Tested by Hyungtae
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "c", "cpp", "h", "hpp" },
+    callback = function()
+        vim.opt_local.tabstop = 2
+        vim.opt_local.softtabstop = 2
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.expandtab = false
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "python" },
+    callback = function()
+        vim.opt_local.tabstop = 4
+        vim.opt_local.shiftwidth = 4
+        vim.opt_local.expandtab = true
+    end,
+})
 
 vim.cmd([[
   autocmd BufNewFile,BufRead *.launch setfiletype xml
@@ -97,7 +114,7 @@ lvim.keys.normal_mode["<C-q>"] = ":bd" -- or vim.keymap.set("n", "<C-q>", ":q<cr
 --   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 -- }
 
--- TODO: User Config for predefined plugins
+-- TODO: User Config for predefined plu`gins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -127,6 +144,19 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
+-- Oct. 23 by Hyungtae: Below LSP setup does not work at all!
+-- require'lspconfig'.clangd.setup{
+--     cmd = { "clangd", "--compile-commands-dir=/home/shapelim/dcist_ws/build/compile_commands" },
+-- }
+
+-- require'lspconfig'.clangd.setup{
+--     cmd = { "clangd", "--compile-commands-dir=./compile_commands.json" },
+--     capabilities = vim.lsp.protocol.make_client_capabilities(),
+--     flags = {
+--       debounce_text_changes = 150,
+--     },
+-- }
+---------------------------------------------------------------------------------------------------
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 -- lvim.lsp.installer.setup.ensure_installed = {
@@ -202,11 +232,18 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
---     {
---       "tomasiser/vim-code-dark"
---     }
--- }
+-- NOTE(hlim): Added by referring to https://github.com/davibarreira/LunarVimConfig/blob/master/config.lua
+lvim.plugins = {
+    { "lervag/vimtex" },
+    {
+        "iamcco/markdown-preview.nvim",
+        build = "cd app && npm install",
+        ft = "markdown",
+        config = function()
+            vim.g.mkdp_auto_start = 0
+        end,
+    }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
