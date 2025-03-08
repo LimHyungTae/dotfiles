@@ -49,7 +49,7 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.tabstop = 2
         vim.opt_local.softtabstop = 2
         vim.opt_local.shiftwidth = 2
-        vim.opt_local.expandtab = false
+        vim.opt_local.expandtab = true
     end,
 })
 
@@ -62,6 +62,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- Consider ROS launch files as xml
 vim.cmd([[
   autocmd BufNewFile,BufRead *.launch setfiletype xml
 ]])
@@ -138,6 +139,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
   "xml", -- for ROS launch file
+  -- "latex" -- for LaTeX support
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -232,9 +234,16 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- Additional Plugins
--- NOTE(hlim): Added by referring to https://github.com/davibarreira/LunarVimConfig/blob/master/config.lua
 lvim.plugins = {
-    { "lervag/vimtex" },
+     -- NOTE(hlim): See https://github.com/lervag/vimtex
+    {   "lervag/vimtex",
+        lazy = false,     -- we don't want to lazy load VimTeX
+        -- tag = "v2.15", -- uncomment to pin to a specific release
+        init = function()
+          -- VimTeX configuration goes here, e.g.
+          vim.g.vimtex_view_method = "zathura"
+        end
+    },
     {
         "iamcco/markdown-preview.nvim",
         build = "cd app && npm install",
@@ -244,6 +253,8 @@ lvim.plugins = {
         end,
     }
 }
+
+
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
